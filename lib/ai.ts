@@ -135,8 +135,9 @@ export function getDeepThink() {
 export function llmCallOptions(kind: 'stream' | 'structured' = 'stream') {
   const provider = currentModelProvider();
   const providerUpper = provider.toUpperCase();
-  const defaultTimeoutMs = kind === 'structured' ? 150_000 : 120_000;
-  const defaultRetries = 3;
+  // Vercel Hobby plan caps at 60s; reduce defaults so individual calls don't outlive the function
+  const defaultTimeoutMs = kind === 'structured' ? 45_000 : 35_000;
+  const defaultRetries = 1;
   const timeoutMs = Number(
     process.env[`${providerUpper}_LLM_TIMEOUT_MS`]
     || process.env.LLM_TIMEOUT_MS

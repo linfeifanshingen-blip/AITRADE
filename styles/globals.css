@@ -729,6 +729,126 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
   .pm-horizon-grid { grid-template-columns: 1fr; }
   .summary-rating { font-size: 21px; }
   .rb-val { font-size: 28px; }
+
+  /* ── Mobile touch targets (≥ 44px) ── */
+  .terminal-input,
+  .terminal-select,
+  .model-select {
+    height: 44px;
+    font-size: 16px;
+  }
+  .terminal-primary,
+  .terminal-secondary {
+    height: 44px;
+    font-size: 14px;
+    padding: 0 16px;
+  }
+  .drawer-toggle {
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+  .terminal-logo {
+    width: 44px;
+    height: 44px;
+  }
+  .step-num {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+  .agent-tag {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+  }
+
+  /* ── Readable minimum font sizes ── */
+  .agent-route { font-size: 11px; }
+  .fn-elapsed { font-size: 11px; }
+  .market-ribbon span { font-size: 12px; }
+  .market-ribbon strong { font-size: 14px; }
+  .step-sub { font-size: 13px; }
+  .terminal-status { font-size: 12px; }
+  .fn-badge { font-size: 11px; }
+  .now-playing { font-size: 12px; }
+  .terminal-watermark { font-size: 11px; }
+
+  /* ── Model checkbox wrapping ── */
+  .model-select-group {
+    flex-wrap: wrap;
+  }
+  .model-checkbox {
+    min-height: 36px;
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  /* ── Compare / Result adjustments ── */
+  .compare-rating { font-size: 20px; }
+  .compare-card { padding: 14px; }
+  .rb-compare-strip { gap: 6px; }
+  .compare-strip-chip { font-size: 12px; padding: 4px 10px; }
+
+  /* ── Content spacing ── */
+  .model-compare-section { padding: 14px; }
+
+  /* ── Navigation link touch target ── */
+  .terminal-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 4px;
+    font-size: 13px;
+  }
+}
+
+/* ========== Ultra-narrow mobile (≤ 480px) ========== */
+@media (max-width: 480px) {
+  .command-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .command-bar > * {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  .terminal-primary,
+  .terminal-secondary {
+    flex-basis: auto;
+    width: 100%;
+  }
+  .model-select-group {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .terminal-status {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .market-ribbon > div {
+    padding: 8px 10px;
+  }
+  .step-card {
+    padding: 12px;
+  }
+  .step-hdr h2 {
+    font-size: 14px;
+  }
+  .compare-header h2 {
+    font-size: 14px;
+  }
+  .fn-title {
+    font-size: 13px;
+  }
+  .model-progress-chip {
+    font-size: 11px;
+  }
+  .terminal-main.arch-page {
+    padding-top: 16px;
+  }
 }
 
 /* ========== Multi-Model Comparison UI ========== */

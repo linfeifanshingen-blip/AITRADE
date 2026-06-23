@@ -45,6 +45,7 @@ export default function Architecture() {
     <>
       <Head>
         <title>林非凡交易研究中心 · 产品介绍</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
       </Head>
 
       {/* Header */}
